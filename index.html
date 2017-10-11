@@ -1,23 +1,19 @@
 <!DOCTYPE html>
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+<html>
+    <head>
+        <title> simple ar.js </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js"></script>        
+        <script src="https://jeromeetienne.github.io/AR.js/three.js/build/ar.min.js"></script>
 
-<body style='margin : 0px; overflow: hidden; font-family: Monospace;'><div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
-	<a href="https://github.com/jeromeetienne/AR.js/" target="_blank">AR.js</a> - mobile performance in a-frame
-	<br/>
-	Contact me any time at <a href='https://twitter.com/jerome_etienne' target='_blank'>@jerome_etienne</a>
-</div>
-	<!-- enable artoolkit on this scene -->
-	<a-scene stats embedded arjs='sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180'>
+    </head>
+    <body>
 
-		<!-- define the object which gonna be put on this marker  -->
-		<a-box position='0 0.5 0' material='opacity: 0.5; side: double'>
-			<a-torus-knot radius='0.26' radius-tubular='0.05'>
-				<a-animation attribute="rotation" to="360 0 0" dur="3000" easing='linear' repeat="indefinite"></a-animation>
-			</a-torus-knot>
-		</a-box>
+        <div id="container"></div>
 
-		<a-marker-camera type='pattern' patternUrl='./d-marker.patt'></a-marker-camera>
-	</a-scene>
-</body>
+        <script src="index.js"></script>
+        
+    </body>
 </html>
