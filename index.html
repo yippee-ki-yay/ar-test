@@ -9,9 +9,8 @@
 	<!-- <a-scene embedded arjs='sourceType: image; sourceUrl:../../data/images/armchair.jpg;'> -->
 	<a-scene embedded arjs='sourceType: webcam;'>
 
-		<a-sphere position="0 0.5 0" radius="0.5" color="#EF2D5E"></a-sphere>
-
-		<a-marker-camera type='pattern' patternUrl='./d-marker.patt'></a-marker-camera>
+		<a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
+		<a-marker-camera type='pattern' patternUrl='d-marker.patt'></a-marker-camera>
 	</a-scene>
 </body>
 </html>
